@@ -20,7 +20,7 @@ class CageForm extends React.Component {
     switch (requestType) {
       case "post":
         return axios
-          .post("http://127.0.0.1:8000/api/", {
+          .post("https://rodentbackend.herokuapp.com/api/", {
             ri: ri,
             pi: pi,
             researcher: researcher,
@@ -36,7 +36,7 @@ class CageForm extends React.Component {
 
       case "put":
         return axios
-          .put(`http://127.0.0.1:8000/api/${cageID}/`, {
+          .put(`https://rodentbackend.herokuapp.com/api/${cageID}/`, {
             ri: ri,
             pi: pi,
             researcher: researcher,
@@ -76,8 +76,8 @@ class CageForm extends React.Component {
               // rules={[{ required: true, message: "RI is required" }]}
             >
               <Select placeholder="Select RI">
-                <Option value="SBIC">SBIC</Option>
-                <Option value="BTI">BTI</Option>
+                <Option value="Singapore Bioimaging Consortium">SBIC</Option>
+                <Option value="Bioprocessing Technology Institute">BTI</Option>
               </Select>
             </Form.Item>
             <Form.Item
@@ -86,8 +86,8 @@ class CageForm extends React.Component {
               // rules={[{ required: true, message: "PI is required" }]}
             >
               <Select placeholder="Select PI">
-                <Option value="Tommy Tan">Tommy Tan</Option>
-                <Option value="Lim Xiu Xiu">Lim Xiu Xiu</Option>
+                <Option value="TOMMY TAN">Tommy Tan</Option>
+                <Option value="LIM XIU XIU">Lim Xiu Xiu</Option>
               </Select>
             </Form.Item>
           </Input.Group>
@@ -111,8 +111,8 @@ class CageForm extends React.Component {
               // rules={[{ required: true, message: "Facility is required" }]}
             >
               <Select placeholder="Select Facility">
-                <Option value="D1">D1</Option>
-                <Option value="D2">D2</Option>
+                <Option value="Department 1">D1</Option>
+                <Option value="Department 2">D2</Option>
               </Select>
             </Form.Item>
           </Input.Group>
@@ -125,11 +125,11 @@ class CageForm extends React.Component {
               // rules={[{ required: true, message: "Room is required" }]}
             >
               <Select placeholder="Select Room">
-                <Option value="Room 1">Room 1</Option>
-                <Option value="Room 2">Room 2</Option>
-                <Option value="Room 3">Room 3</Option>
-                <Option value="Room 4">Room 4</Option>
-                <Option value="Room 5">Room 5</Option>
+                <Option value="ROOM 1">Room 1</Option>
+                <Option value="ROOM 2">Room 2</Option>
+                <Option value="ROOM 3">Room 3</Option>
+                <Option value="ROOM 4">Room 4</Option>
+                <Option value="ROOM 5">Room 5</Option>
               </Select>
             </Form.Item>
             <Form.Item
@@ -138,11 +138,11 @@ class CageForm extends React.Component {
               // rules={[{ required: true, message: "Rack is required" }]}
             >
               <Select placeholder="Select Rack">
-                <Option value="Rack 1">Rack 1</Option>
-                <Option value="Rack 2">Rack 2</Option>
-                <Option value="Rack 3">Rack 3</Option>
-                <Option value="Rack 4">Rack 4</Option>
-                <Option value="Rack 5">Rack 5</Option>
+                <Option value="RACK 1">Rack 1</Option>
+                <Option value="RACK 2">Rack 2</Option>
+                <Option value="RACK 3">Rack 3</Option>
+                <Option value="RACK 4">Rack 4</Option>
+                <Option value="RACK 5">Rack 5</Option>
               </Select>
             </Form.Item>
           </Input.Group>

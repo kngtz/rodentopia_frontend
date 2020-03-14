@@ -12,7 +12,7 @@ class ArticleList extends React.Component {
 
   handleClick1 = () => {
     console.log("1");
-    axios.get("http://127.0.0.1:8000/api/").then(res => {
+    axios.get("https://rodentbackend.herokuapp.com/api/").then(res => {
       let array1 = res.data.filter(x => x.facility == "Department 1");
       this.setState({
         cages: array1
@@ -22,7 +22,7 @@ class ArticleList extends React.Component {
 
   handleClick2 = () => {
     console.log("2");
-    axios.get("http://127.0.0.1:8000/api/").then(res => {
+    axios.get("https://rodentbackend.herokuapp.com/api/").then(res => {
       let array1 = res.data.filter(x => x.facility == "Department 2");
       this.setState({
         cages: array1
@@ -34,7 +34,7 @@ class ArticleList extends React.Component {
     console.log("click filter");
     console.log(optionKey, optionValue);
     console.log(event);
-    axios.get("http://127.0.0.1:8000/api/").then(res => {
+    axios.get("https://rodentbackend.herokuapp.com/api/").then(res => {
       let array1 = res.data.filter(x => x.optionKey == optionValue);
       this.setState({
         cages: array1
@@ -43,7 +43,7 @@ class ArticleList extends React.Component {
   };
 
   componentDidMount() {
-    axios.get("http://127.0.0.1:8000/api/").then(res => {
+    axios.get("https://rodentbackend.herokuapp.com/api/").then(res => {
       this.setState({
         cages: res.data
       });

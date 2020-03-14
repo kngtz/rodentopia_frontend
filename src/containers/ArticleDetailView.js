@@ -13,7 +13,7 @@ class ArticleDetail extends React.Component {
   componentDidMount() {
     const cageID = this.props.match.params.cageID;
     console.log(cageID);
-    axios.get("http://127.0.0.1:8000/api/" + cageID).then(res => {
+    axios.get("https://rodentbackend.herokuapp.com/api/" + cageID).then(res => {
       this.setState({
         cage: res.data
       });
@@ -23,7 +23,10 @@ class ArticleDetail extends React.Component {
   handleClick = () => {
     console.log("this is:", this);
     return axios
-      .delete("http://127.0.0.1:8000/api/" + this.state.cage.id, {})
+      .delete(
+        "https://rodentbackend.herokuapp.com/api/" + this.state.cage.id,
+        {}
+      )
       .then(res => console.log(res))
       .catch(error => console.error(error));
     // <Redirect to="/cages" />;
